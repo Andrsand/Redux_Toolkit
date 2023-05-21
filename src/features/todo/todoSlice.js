@@ -8,7 +8,9 @@ export const todoSlice = createSlice({ // создаем и экспортиру
     name: 'todos',
     initialState,
     reducers: {
-        addTodo: (state, action) => { },
+        addTodo: (state, action) => {       // в массив todos добавляются данные из формы
+            state.todos.push(action.payload)
+        },
     },
 })
 
