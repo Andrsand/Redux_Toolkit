@@ -12,8 +12,11 @@ export const userSlice = createSlice({ // редюсер - объект с оп�
         setFirstName: (state, action) => { // функция - экшн с параметрами: state - в нашем случае это initialState и action - payload (получение данных из фрмы UI)
             state.firstName = action.payload
         },
+        setLastName: (state, action) => { // функция - экшн с параметрами: state - в нашем случае это initialState и action - payload (получение данных из фрмы UI)
+            state.lastName = action.payload
+        },
     },
 })
 
-export const { setFirstName } = userSlice.actions
+export const { setFirstName, setLastName } = userSlice.actions
 export default userSlice.reducer
